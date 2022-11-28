@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div v-for="(addr,i) in addrs">
+        {{i}}:{{addr}}<br>
+    </div>
+    {{url}}<br>
+    <input type="text" v-model="url">
+    <input type="text" v-bind:value="url">
+
+</div>
+
+
+<script src="../../js/vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:function () {
+            return{
+                addrs:["山西","西安","河北"],
+                url:"https://www.baidu.com"
+            }
+        },
+        //挂载成功后执行，整个html页面渲染完成
+        mounted(){
+            alert("已初始化完成")
+        }
+
+    })
+</script>
+</body>
+</html>

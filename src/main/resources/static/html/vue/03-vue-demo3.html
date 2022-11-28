@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" v-on:click="show()" value="按钮">
+    <input type="button" @click="show" value="按钮2">
+
+</div>
+
+    <script src="../../js/vue.js"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data: function (){
+                return{
+
+                }
+            },
+            methods:{
+                show(){
+                    alert("我被点击了");
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

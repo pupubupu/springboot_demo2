@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <input v-bind:value="username"><br>  <!-- 实现模型到视图的绑定 -->
+        <input v-model="username"><br> <!-- 实现模型到视图的双向绑定 -->
+        {{username}}<br>
+        {{"nihao"}}<br>
+        <button type="button" value="点我"  @click="abc">点我</button><br>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>  <!-- 引入vue.js -->
+    <script>
+        new Vue({
+            el:"#app",
+            // data(){
+            //     return{
+            //         username:""
+            //     }
+            // }
+            data: function (){
+                return{
+                    username:""
+                }
+            },
+            methods:{
+                abc(){
+                    this.username = "url"
+                }
+            }
+        })
+    </script>
+</body>
+</html>

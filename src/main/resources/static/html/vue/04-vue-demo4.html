@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <input type="text" v-model="count">
+    <div v-if="count==1">div1</div>
+    <div v-else-if="count==2">div2</div>
+    <div v-else>div3</div>
+    <div v-show="count==2">展示</div>
+
+</div>
+
+<script src="../../js/vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data: function (){
+            return{
+                count:2
+            }
+        },
+        methods:{
+            show(){
+                alert("我被点击了");
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

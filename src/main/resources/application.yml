@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: "011029"
+    url: jdbc:mysql://localhost:3306/spring?serverTimezone=UTC
+  #    type: com.alibaba.druid.pool.DruidDataSource
+  main:
+    banner-mode: off
+
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      id-type: assign_id # id生成策略
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: false
+
+  type-aliases-package: com.pyj.domain
+
+#logging:
+#  config: classpath:logback.xml
+
+
+#pagehelper:
+#  helper-dialect: mysql
+#  reasonable: true
+#  support-methods-arguments: true
+#  params: count=countSql
+#
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql

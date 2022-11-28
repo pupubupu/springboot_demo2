@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="url">
+        <a>点击一下</a>
+        <a v-bind:href="url">点击一下</a>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script>
+
+        var elementsByTagName = document.getElementsByTagName("a");
+        console.log(elementsByTagName)
+        elementsByTagName[0].setAttribute("href","http://www.baidu.com");
+        new Vue({
+            el:"#app",
+            // data(){
+            //     return{
+            //         username:""
+            //     }
+            // }
+            data: function (){
+                return{
+                    username:"",
+                    url:""
+                }
+            }
+        })
+    </script>
+</body>
+</html>
